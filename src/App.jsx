@@ -1,7 +1,12 @@
 import "./App.css";
+import Clock from "./components/Clock/Clock";
 
 function App() {
-  return <h1>TBOI Screensaver</h1>;
+  return (
+    <div>
+      <Clock />
+    </div>
+  );
 }
 
 export default App;
