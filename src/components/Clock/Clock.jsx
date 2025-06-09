@@ -1,11 +1,11 @@
-import Time from "./Time";
-import Date from "./Date";
+import TimeDisplay from "./TimeDisplay";
+import DateDisplay from "./DateDisplay";
 
 export default function Clock() {
   return (
     <div>
-      <Time />
-      <Date />
+      <TimeDisplay />
+      <DateDisplay />
     </div>
   );
 }
