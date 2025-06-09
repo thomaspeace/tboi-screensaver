@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Upheaval";
+  src: url("/src/assets/fonts/upheavtt.ttf") format("truetype");
+}
+
+* {
+  font-family: "Upheaval", sans-serif;
+  color: white;
+}
+
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.time {
+  font-size: 100px;
+}
+
+.date {
+  font-size: 40px;
+}

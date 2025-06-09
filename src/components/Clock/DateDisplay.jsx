@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
+import "./Clock.css";
 
 export default function DateDisplay() {
   const [date, setDate] = useState(new Date());

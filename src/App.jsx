@@ -6,7 +6,7 @@ function App() {
   useWakeLock();
 
   return (
-    <div>
+    <div className="app-container">
       <Clock />
     </div>
   );
