@@ -49,6 +49,15 @@
   display: flex;
   justify-content: space-between;
   z-index: 10;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.app-header.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .header-button {
