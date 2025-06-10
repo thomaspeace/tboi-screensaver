@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
 import "./Clock.css";
+import streak_effect from "../../assets/svgs/streak_effect.svg";
 
 export default function TimeDisplay() {
   const [time, setTime] = useState(new Date());
@@ -12,5 +13,7 @@ export default function TimeDisplay() {
     return () => clearInterval(timer);
   }, []);
 
-  return <div className="time">{format(time, "HH:mm:ss")}</div>;
+  return (
+    <div className="time-element outline-text">{format(time, "HH:mm:ss")}</div>
+  );
 }

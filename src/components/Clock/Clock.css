@@ -1,6 +1,5 @@
 * {
   color: rgb(255, 255, 255);
-  background-color: rgb(175, 175, 175);
 }
 
 .clock-container {
@@ -10,21 +9,21 @@
   justify-content: center;
   height: 100%;
   width: 100%;
+  /* need relative postioning for the streak effect to have abs positioning */
+  position: relative;
 }
 
-.time {
-  font-size: 100px;
-  text-rendering: optimizeLegibility;
-  transform: translateZ(0);
-  padding-left: 1px;
-  font-family: "Upheaval";
+.streak-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  width: 100%;
+  height: auto;
 }
 
-.date {
-  font-size: 25px;
-  font-family: "PF Tempesta Seven Condensed Bold";
-  font-weight: 900;
-  text-rendering: optimizeLegibility;
+.outline-text {
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
     2px 2px 0 #000, -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000,
     3px 3px 0 #000, -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000,
@@ -42,4 +41,23 @@
     5px 3px 0 #000, -4px -5px 0 #000, 4px -5px 0 #000, -5px -4px 0 #000,
     5px -4px 0 #000, -4px 5px 0 #000, 4px 5px 0 #000, -5px 4px 0 #000,
     5px 4px 0 #000;
+}
+
+.time-element {
+  font-size: 100px;
+  text-rendering: optimizeLegibility;
+  transform: translateZ(0);
+  padding-left: 1px;
+  font-family: "Upheaval";
+  position: relative;
+  z-index: 1;
+}
+
+.date-element {
+  font-size: 25px;
+  font-family: "PF Tempesta Seven Condensed Bold";
+  font-weight: 900;
+  text-rendering: optimizeLegibility;
+  position: relative;
+  z-index: 1;
 }

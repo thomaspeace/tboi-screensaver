@@ -12,5 +12,9 @@ export default function DateDisplay() {
     return () => clearInterval(timer);
   }, []);
 
-  return <div className="date">{format(date, "do MMMM yyyy")}</div>;
+  return (
+    <div className="date-element outline-text">
+      {format(date, "do MMMM yyyy")}
+    </div>
+  );
 }
