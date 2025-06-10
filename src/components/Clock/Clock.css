@@ -24,27 +24,27 @@
 }
 
 .outline-text {
-  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
-    2px 2px 0 #000, -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000,
-    3px 3px 0 #000, -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000,
-    4px 4px 0 #000, -1px -3px 0 #000, 1px -3px 0 #000, -3px -1px 0 #000,
-    3px -1px 0 #000, -1px 3px 0 #000, 1px 3px 0 #000, -3px 1px 0 #000,
-    3px 1px 0 #000, -2px -4px 0 #000, 2px -4px 0 #000, -4px -2px 0 #000,
-    4px -2px 0 #000, -2px 4px 0 #000, 2px 4px 0 #000, -4px 2px 0 #000,
-    4px 2px 0 #000, -5px -5px 0 #000, 5px -5px 0 #000, -5px 5px 0 #000,
-    5px 5px 0 #000, -1px -5px 0 #000, 1px -5px 0 #000, -5px -1px 0 #000,
-    5px -1px 0 #000, -1px 5px 0 #000, 1px 5px 0 #000, -5px 1px 0 #000,
-    5px 1px 0 #000, -2px -5px 0 #000, 2px -5px 0 #000, -5px -2px 0 #000,
-    5px -2px 0 #000, -2px 5px 0 #000, 2px 5px 0 #000, -5px 2px 0 #000,
-    5px 2px 0 #000, -3px -5px 0 #000, 3px -5px 0 #000, -5px -3px 0 #000,
-    5px -3px 0 #000, -3px 5px 0 #000, 3px 5px 0 #000, -5px 3px 0 #000,
-    5px 3px 0 #000, -4px -5px 0 #000, 4px -5px 0 #000, -5px -4px 0 #000,
-    5px -4px 0 #000, -4px 5px 0 #000, 4px 5px 0 #000, -5px 4px 0 #000,
-    5px 4px 0 #000;
+  text-shadow: calc(-0.2vw) calc(-0.2vw) 0 #000, calc(0.2vw) calc(-0.2vw) 0 #000,
+    calc(-0.2vw) calc(0.2vw) 0 #000, calc(0.2vw) calc(0.2vw) 0 #000,
+    -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000,
+    -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000, 4px 4px 0 #000,
+    -1px -3px 0 #000, 1px -3px 0 #000, -3px -1px 0 #000, 3px -1px 0 #000,
+    -1px 3px 0 #000, 1px 3px 0 #000, -3px 1px 0 #000, 3px 1px 0 #000,
+    -2px -4px 0 #000, 2px -4px 0 #000, -4px -2px 0 #000, 4px -2px 0 #000,
+    -2px 4px 0 #000, 2px 4px 0 #000, -4px 2px 0 #000, 4px 2px 0 #000,
+    -5px -5px 0 #000, 5px -5px 0 #000, -5px 5px 0 #000, -1px -5px 0 #000,
+    1px -5px 0 #000, -5px -1px 0 #000, 5px -1px 0 #000, -1px 5px 0 #000,
+    1px 5px 0 #000, -5px 1px 0 #000, 5px 1px 0 #000, -2px -5px 0 #000,
+    2px -5px 0 #000, -5px -2px 0 #000, 5px -2px 0 #000, -2px 5px 0 #000,
+    2px 5px 0 #000, -5px 2px 0 #000, 5px 2px 0 #000, -3px -5px 0 #000,
+    3px -5px 0 #000, -5px -3px 0 #000, 5px -3px 0 #000, -3px 5px 0 #000,
+    3px 5px 0 #000, -5px 3px 0 #000, 5px 3px 0 #000, -4px -5px 0 #000,
+    4px -5px 0 #000, -5px -4px 0 #000, 5px -4px 0 #000, -4px 5px 0 #000,
+    4px 5px 0 #000, -5px 4px 0 #000, 5px 4px 0 #000;
 }
 
 .time-element {
-  font-size: 100px;
+  font-size: 5vw;
   text-rendering: optimizeLegibility;
   transform: translateZ(0);
   padding-left: 1px;
@@ -54,7 +54,7 @@
 }
 
 .date-element {
-  font-size: 25px;
+  font-size: 1.5vw;
   font-family: "PF Tempesta Seven Condensed Bold";
   font-weight: 900;
   text-rendering: optimizeLegibility;
