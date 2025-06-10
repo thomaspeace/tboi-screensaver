@@ -9,7 +9,7 @@ function SettingsProvider({ children }) {
       // more settings for app
     },
     clock: {
-      showStreak: true,
+      showStreak: false,
     },
     time: {
       timeFormat: "HH:mm:ss",

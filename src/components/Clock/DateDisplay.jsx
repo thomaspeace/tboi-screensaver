@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
 import "./Clock.css";
+import { useSettings } from "../../contexts/SettingsContext";
 
 export default function DateDisplay() {
   const [date, setDate] = useState(new Date());
+  const { settings } = useSettings();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -13,8 +15,8 @@ export default function DateDisplay() {
   }, []);
 
   return (
-    <div className="date-element outline-text">
-      {format(date, "do MMMM yyyy")}
+    <div className="date-element date-outline-text">
+      {format(date, settings.date.dateFormat)}
     </div>
   );
 }

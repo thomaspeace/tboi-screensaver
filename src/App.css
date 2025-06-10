@@ -31,10 +31,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: rgb(74, 74, 74);
-}
-
 .app-container {
   display: flex;
   justify-content: center;

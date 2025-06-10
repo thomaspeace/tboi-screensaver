@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
 import "./Clock.css";
+import { useSettings } from "../../contexts/SettingsContext";
 
 export default function TimeDisplay() {
   const [time, setTime] = useState(new Date());
+  const { settings } = useSettings();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -13,6 +15,8 @@ export default function TimeDisplay() {
   }, []);
 
   return (
-    <div className="time-element outline-text">{format(time, "HH:mm:ss")}</div>
+    <div className="time-element time-outline-text">
+      {format(time, settings.time.timeFormat)}
+    </div>
   );
 }
