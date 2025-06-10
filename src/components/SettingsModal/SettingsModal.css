@@ -58,3 +58,57 @@
   font-size: 2rem;
   line-height: 1.4;
 }
+
+.setting-group {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.setting-group label {
+  font-size: 1.5rem;
+  font-family: "teammeatfont", monospace;
+}
+
+.color-picker {
+  width: 60px;
+  height: 40px;
+  padding: 5px;
+  border: 2px solid white;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.color-picker::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.color-picker::-webkit-color-swatch {
+  border: none;
+  border-radius: 2px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 2px solid white;
+  background: rgba(255, 0, 0, 0.5);
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+input[type="checkbox"]:checked {
+  background: rgba(0, 255, 0, 0.5);
+}
+
+input[type="checkbox"]:hover {
+  background: rgba(255, 0, 0, 0.7);
+}
+
+input[type="checkbox"]:checked:hover {
+  background: rgba(0, 255, 0, 0.7);
+}
