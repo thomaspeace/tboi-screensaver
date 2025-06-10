@@ -1,3 +1,30 @@
+@font-face {
+  font-family: "Upheaval";
+  src: url("/src/assets/fonts/upheavtt.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PF Tempesta Seven Condensed";
+  src: url("/src/assets/fonts/pf_tempesta_seven_condensed.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "PF Tempesta Seven Condensed Bold";
+  src: url("/src/assets/fonts/pf_tempesta_seven_condensed_bold.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "teammeatfont";
+  src: url("/src/assets/fonts/teammeatfont.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "04b03";
+  src: url("/src/assets/fonts/04b03.ttf") format("truetype");
+}
+
 * {
   margin: 0;
   padding: 0;

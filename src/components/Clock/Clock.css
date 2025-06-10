@@ -1,11 +1,6 @@
-@font-face {
-  font-family: "Upheaval";
-  src: url("/src/assets/fonts/upheavtt.ttf") format("truetype");
-}
-
 * {
-  font-family: "Upheaval", sans-serif;
-  color: white;
+  color: rgb(255, 255, 255);
+  background-color: rgb(175, 175, 175);
 }
 
 .clock-container {
@@ -19,8 +14,32 @@
 
 .time {
   font-size: 100px;
+  text-rendering: optimizeLegibility;
+  transform: translateZ(0);
+  padding-left: 1px;
+  font-family: "Upheaval";
 }
 
 .date {
-  font-size: 40px;
+  font-size: 25px;
+  font-family: "PF Tempesta Seven Condensed Bold";
+  font-weight: 900;
+  text-rendering: optimizeLegibility;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+    2px 2px 0 #000, -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000,
+    3px 3px 0 #000, -4px -4px 0 #000, 4px -4px 0 #000, -4px 4px 0 #000,
+    4px 4px 0 #000, -1px -3px 0 #000, 1px -3px 0 #000, -3px -1px 0 #000,
+    3px -1px 0 #000, -1px 3px 0 #000, 1px 3px 0 #000, -3px 1px 0 #000,
+    3px 1px 0 #000, -2px -4px 0 #000, 2px -4px 0 #000, -4px -2px 0 #000,
+    4px -2px 0 #000, -2px 4px 0 #000, 2px 4px 0 #000, -4px 2px 0 #000,
+    4px 2px 0 #000, -5px -5px 0 #000, 5px -5px 0 #000, -5px 5px 0 #000,
+    5px 5px 0 #000, -1px -5px 0 #000, 1px -5px 0 #000, -5px -1px 0 #000,
+    5px -1px 0 #000, -1px 5px 0 #000, 1px 5px 0 #000, -5px 1px 0 #000,
+    5px 1px 0 #000, -2px -5px 0 #000, 2px -5px 0 #000, -5px -2px 0 #000,
+    5px -2px 0 #000, -2px 5px 0 #000, 2px 5px 0 #000, -5px 2px 0 #000,
+    5px 2px 0 #000, -3px -5px 0 #000, 3px -5px 0 #000, -5px -3px 0 #000,
+    5px -3px 0 #000, -3px 5px 0 #000, 3px 5px 0 #000, -5px 3px 0 #000,
+    5px 3px 0 #000, -4px -5px 0 #000, 4px -5px 0 #000, -5px -4px 0 #000,
+    5px -4px 0 #000, -4px 5px 0 #000, 4px 5px 0 #000, -5px 4px 0 #000,
+    5px 4px 0 #000;
 }
