@@ -33,7 +33,35 @@
 
 .app-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  position: relative;
+}
+
+.app-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.header-button {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: 2px solid white;
+  padding: 0.5rem 1rem;
+  padding-top: 0.7rem;
+  cursor: pointer;
+  font-family: "teammeatfont", monospace;
+  font-size: 2rem;
+}
+
+.header-button:hover {
+  background: rgba(0, 0, 0, 0.8);
 }

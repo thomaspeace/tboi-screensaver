@@ -12,6 +12,10 @@ function App() {
       className="app-container"
       style={{ backgroundColor: settings.app.backgroundColor }}
     >
+      <div className="app-header">
+        <button className="header-button">Fullscreen</button>
+        <button className="header-button">Settings</button>
+      </div>
       <Clock />
     </div>
   );
