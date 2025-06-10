@@ -19,7 +19,41 @@ function SettingsProvider({ children }) {
     },
   });
 
-  const value = {};
+  const updateAppSettings = (newAppSettings) => {
+    setSettings((prev) => ({
+      ...prev,
+      app: { ...prev.app, ...newAppSettings },
+    }));
+  };
+
+  const updateClockSettings = (newClockSettings) => {
+    setSettings((prev) => ({
+      ...prev,
+      clock: { ...prev.clock, ...newClockSettings },
+    }));
+  };
+
+  const updateTimeSettings = (newTimeSettings) => {
+    setSettings((prev) => ({
+      ...prev,
+      time: { ...prev.time, ...newTimeSettings },
+    }));
+  };
+
+  const updateDateSettings = (newDateSettings) => {
+    setSettings((prev) => ({
+      ...prev,
+      date: { ...prev.date, ...newDateSettings },
+    }));
+  };
+
+  const value = {
+    settings,
+    updateAppSettings,
+    updateClockSettings,
+    updateTimeSettings,
+    updateDateSettings,
+  };
 
   return (
     <SettingsContext.Provider value={value}>
