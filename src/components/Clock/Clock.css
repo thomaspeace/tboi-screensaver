@@ -56,15 +56,15 @@
   font-family: "Upheaval";
   position: relative;
   z-index: 1;
-  margin-top: 2vh;
-  margin-top: calc(2vh * (100vw / 177.78vh));
+  margin-top: calc(2vh + (100vw - 177.78vh) * 0.015);
 }
 
 .date-element {
-  font-size: 1.5vw;
+  font-size: 1.75vw;
   font-family: "PF Tempesta Seven Condensed Bold";
   font-weight: 900;
   text-rendering: optimizeLegibility;
   position: relative;
   z-index: 1;
+  margin-top: -5px;
 }
