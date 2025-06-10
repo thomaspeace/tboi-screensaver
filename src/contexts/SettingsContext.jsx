@@ -27,3 +27,13 @@ function SettingsProvider({ children }) {
     </SettingsContext.Provider>
   );
 }
+
+function useSettings() {
+  const context = useContext(SettingsContext);
+  if (!context) {
+    throw new Error("useSettings has to be used with SettingsProvider");
+  }
+  return context;
+}
+
+export { SettingsProvider, useSettings };
