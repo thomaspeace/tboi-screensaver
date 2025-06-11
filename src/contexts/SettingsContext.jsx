@@ -5,7 +5,7 @@ const SettingsContext = createContext();
 function SettingsProvider({ children }) {
   const [settings, setSettings] = useState({
     app: {
-      backgroundColor: "rgb(74, 74, 74)",
+      backgroundColor: "#4A4A4A",
       // more settings for app
     },
     clock: {
