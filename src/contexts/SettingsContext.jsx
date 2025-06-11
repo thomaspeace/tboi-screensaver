@@ -56,12 +56,17 @@ function SettingsProvider({ children }) {
     }));
   };
 
+  const resetSettings = () => {
+    setSettings(DEFAULT_SETTINGS);
+  };
+
   const value = {
     settings,
     updateAppSettings,
     updateClockSettings,
     updateTimeSettings,
     updateDateSettings,
+    resetSettings,
   };
 
   return (

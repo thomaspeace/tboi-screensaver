@@ -149,3 +149,24 @@ select option {
   color: white;
   padding: 10px;
 }
+
+.reset-group {
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.reset-button {
+  background: rgba(255, 0, 0, 0.567);
+  color: white;
+  border: 2px solid white;
+  padding: 0.5rem 1rem;
+  padding-top: 0.7rem;
+  cursor: pointer;
+  font-family: "teammeatfont", monospace;
+  font-size: 1.8rem;
+  transition: background-color 0.2s ease;
+}
+
+.reset-button:hover {
+  background: rgba(255, 0, 0, 0.4);
+}

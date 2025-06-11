@@ -8,6 +8,7 @@ export default function SettingsModal({ isOpen, onClose }) {
     updateClockSettings,
     updateTimeSettings,
     updateDateSettings,
+    resetSettings,
   } = useSettings();
 
   if (!isOpen) return null;
@@ -26,6 +27,14 @@ export default function SettingsModal({ isOpen, onClose }) {
 
   const handleDateFormatChange = (e) => {
     updateDateSettings({ dateFormat: e.target.value });
+  };
+
+  const handleReset = () => {
+    if (
+      window.confirm("Are you sure you want to reset all settings to default?")
+    ) {
+      resetSettings();
+    }
   };
 
   return (
@@ -93,6 +102,11 @@ export default function SettingsModal({ isOpen, onClose }) {
               <option value="EEEE, MMMM do">Monday, June 30th</option>
               <option value="do MMMM">30th June</option>
             </select>
+          </div>
+          <div className="setting-group reset-group">
+            <button className="reset-button" onClick={handleReset}>
+              Reset to Default Settings
+            </button>
           </div>
         </div>
       </div>
