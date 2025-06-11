@@ -2,7 +2,13 @@ import { useSettings } from "../../contexts/SettingsContext";
 import "./SettingsModal.css";
 
 export default function SettingsModal({ isOpen, onClose }) {
-  const { settings, updateAppSettings, updateClockSettings } = useSettings();
+  const {
+    settings,
+    updateAppSettings,
+    updateClockSettings,
+    updateTimeSettings,
+    updateDateSettings,
+  } = useSettings();
 
   if (!isOpen) return null;
 
@@ -12,6 +18,14 @@ export default function SettingsModal({ isOpen, onClose }) {
 
   const handleStreakToggle = (e) => {
     updateClockSettings({ showStreak: e.target.checked });
+  };
+
+  const handleTimeFormatChange = (e) => {
+    updateTimeSettings({ timeFormat: e.target.value });
+  };
+
+  const handleDateFormatChange = (e) => {
+    updateDateSettings({ dateFormat: e.target.value });
   };
 
   return (
@@ -42,6 +56,22 @@ export default function SettingsModal({ isOpen, onClose }) {
               checked={settings.clock.showStreak}
               onChange={handleStreakToggle}
             />
+          </div>
+          <div className="setting-group">
+            <label htmlFor="timeFormat">Time Format</label>
+            <select
+              id="timeFormat"
+              value={settings.time.timeFormat}
+              onChange={handleTimeFormatChange}
+            ></select>
+          </div>
+          <div className="setting-group">
+            <label htmlFor="dateFormat">Date Format</label>
+            <select
+              id="dateFormat"
+              value={settings.date.dateFormat}
+              onChange={handleDateFormatChange}
+            ></select>
           </div>
         </div>
       </div>
