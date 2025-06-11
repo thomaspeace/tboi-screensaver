@@ -1,23 +1,32 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const SettingsContext = createContext();
 
+const DEFAULT_SETTINGS = {
+  app: {
+    backgroundColor: "#4A4A4A",
+    // more settings for app
+  },
+  clock: {
+    showStreak: true,
+  },
+  time: {
+    timeFormat: "HH:mm:ss",
+  },
+  date: {
+    dateFormat: "do MMMM yyyy",
+  },
+};
+
 function SettingsProvider({ children }) {
-  const [settings, setSettings] = useState({
-    app: {
-      backgroundColor: "#4A4A4A",
-      // more settings for app
-    },
-    clock: {
-      showStreak: true,
-    },
-    time: {
-      timeFormat: "HH:mm:ss",
-    },
-    date: {
-      dateFormat: "do MMMM yyyy",
-    },
+  const [settings, setSettings] = useState(() => {
+    const savedSettings = localStorage.getItem("tboi-screensaver-settings");
+    return savedSettings ? JSON.parse(savedSettings) : DEFAULT_SETTINGS;
   });
+
+  useEffect(() => {
+    localStorage.setItem("tboi-screensaver-settings", JSON.stringify(settings));
+  }, [settings]);
 
   const updateAppSettings = (newAppSettings) => {
     setSettings((prev) => ({
