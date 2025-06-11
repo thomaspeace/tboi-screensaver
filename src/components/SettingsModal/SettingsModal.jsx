@@ -63,7 +63,12 @@ export default function SettingsModal({ isOpen, onClose }) {
               id="timeFormat"
               value={settings.time.timeFormat}
               onChange={handleTimeFormatChange}
-            ></select>
+            >
+              <option value="HH:mm:ss">14:05:12</option>
+              <option value="HH:mm">14:05</option>
+              <option value="h:mm:ss a">2:05:12 PM</option>
+              <option value="h:mm a">2:05 PM</option>
+            </select>
           </div>
           <div className="setting-group">
             <label htmlFor="dateFormat">Date Format</label>
@@ -71,7 +76,23 @@ export default function SettingsModal({ isOpen, onClose }) {
               id="dateFormat"
               value={settings.date.dateFormat}
               onChange={handleDateFormatChange}
-            ></select>
+            >
+              <option value="do MMMM yyyy">30th June 2025</option>
+              <option value="EEEE, do MMMM yyyy">Monday, 30th June 2025</option>
+              <option value="EEE, do MMM yyyy">Mon, 30th Jun 2025</option>
+              <option value="dd/MM/yyyy">30/06/2025</option>
+              <option value="MM/dd/yyyy">06/30/2025</option>
+              <option value="yyyy-MM-dd">2025-06-30</option>
+              <option value="do MMM yyyy">30th Jun 2025</option>
+              <option value="EEEE, d MMM yyyy">Monday, 30 Jun 2025</option>
+              <option value="EEEE d MMMM">Monday 30 June</option>
+              <option value="do 'of' MMMM yyyy">30th of June 2025</option>
+              <option value="d.M.yyyy">30.6.2025</option>
+              <option value="MMM do, yyyy">Jun 30th, 2025</option>
+              <option value="MMMM do yyyy">June 30th 2025</option>
+              <option value="EEEE, MMMM do">Monday, June 30th</option>
+              <option value="do MMMM">30th June</option>
+            </select>
           </div>
         </div>
       </div>
