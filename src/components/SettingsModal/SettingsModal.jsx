@@ -1,5 +1,6 @@
 import { useSettings } from "../../contexts/SettingsContext";
 import "./SettingsModal.css";
+import { useState } from "react";
 
 export default function SettingsModal({ isOpen, onClose }) {
   const {
@@ -11,11 +12,13 @@ export default function SettingsModal({ isOpen, onClose }) {
     resetSettings,
   } = useSettings();
 
+  const [tempColor, setTempColor] = useState(settings.app.backgroundColor);
+
   if (!isOpen) return null;
 
-  const handleBackgroundColorChange = (e) => {
-    updateAppSettings({ backgroundColor: e.target.value });
-  };
+  // const handleBackgroundColorChange = (e) => {
+  //   updateAppSettings({ backgroundColor: e.target.value });
+  // };
 
   const handleStreakToggle = (e) => {
     updateClockSettings({ showStreak: e.target.checked });
@@ -49,13 +52,23 @@ export default function SettingsModal({ isOpen, onClose }) {
         <div className="modal-body">
           <div className="setting-group">
             <label htmlFor="backgroundColor">Background Colour</label>
-            <input
-              type="color"
-              id="backgroundColor"
-              value={settings.app.backgroundColor}
-              onChange={handleBackgroundColorChange}
-              className="color-picker"
-            />
+            <div className="color-picker-group">
+              <input
+                type="color"
+                id="backgroundColor"
+                value={tempColor}
+                onChange={(e) => setTempColor(e.target.value)}
+                className="color-picker"
+              />
+              <button
+                className="apply-button"
+                onClick={() =>
+                  updateAppSettings({ backgroundColor: tempColor })
+                }
+              >
+                Apply
+              </button>
+            </div>
           </div>
           <div className="setting-group">
             <label htmlFor="toggleStreak">Show Streak Effect</label>

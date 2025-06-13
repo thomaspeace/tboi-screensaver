@@ -170,3 +170,25 @@ select option {
 .reset-button:hover {
   background: rgba(255, 0, 0, 0.4);
 }
+
+.color-picker-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.apply-button {
+  background: rgba(0, 255, 0, 0.567);
+  color: white;
+  border: 2px solid white;
+  padding: 0.5rem 1rem;
+  padding-top: 0.7rem;
+  cursor: pointer;
+  font-family: "teammeatfont", monospace;
+  font-size: 1.8rem;
+  transition: background-color 0.2s ease;
+}
+
+.apply-button:hover {
+  background: rgba(0, 255, 0, 0.4);
+}
